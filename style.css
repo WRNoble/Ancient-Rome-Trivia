@@ -1,0 +1,12 @@
+header {
+	background-color: red;
+	color: gold;
+}
+
+div {
+	display: flex;
+	justify-content: center;
+	height: 400px;
+	width: 700px;
+	background-color: blue;
+}
