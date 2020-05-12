@@ -1,5 +1,21 @@
-let cards = ["Which river is Julius Caesar famous for crossing?", "Which Roman general defeated Hannibal Barca at the Battle of Zama?", "This Roman Emperor wrote Meditations?"];
-let answers = ["Rubicon", "Scipio", "Marcus Aurelius"];
+let cards = [
+"Which river is Julius Caesar famous for crossing?",
+"The first christian Emperor?" 
+"Which Roman general defeated Hannibal Barca at the Battle of Zama?", 
+"This Roman Emperor wrote Meditations?", 
+"The name of the general who led elephants over the Alps to attack Rome?",
+"The first Emperor of the Roman Empire?",
+"This military unit was the backbone of the Roman military"
+];
+let answers = [
+"RUBICON",
+"CONSTANTINE", 
+"SCIPIO", 
+"MARCUS AURELIUS", 
+"HANNIBAL",
+"AUGUSTUS",
+"LEGION"
+];
 let wrongCards = [];
 let scoreTracker = [];
 let board = document.querySelector('.board');
@@ -26,5 +42,5 @@ for(let i = 0; i < cards.length; i++) {
 
 //score trackers prints the length of rightCards array.
 
-//for(let i = 0; i <= scoreTracker.length; i++)
+//for(let i = 0; i < scoreTracker.length; i++) {}
 	
