@@ -2,12 +2,13 @@ let cards = ["Which river is Julius Caesar famous for crossing?", "Which Roman g
 let answers = ["Rubicon", "Scipio", "Marcus Aurelius"];
 let	rightCards = [];
 let board = document.querySelector('.board')
-console.log(board.outerHTML)
+
 
 //loop through the cards array
 
 for(let i = 0; i <= cards.length; i++) {
-	let question = i
+	let question = cards[i]
+	console.log(question)
 	board.textContent(question)
 }
 
