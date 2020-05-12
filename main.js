@@ -2,17 +2,19 @@ let cards = ["Which river is Julius Caesar famous for crossing?", "Which Roman g
 let answers = ["Rubicon", "Scipio", "Marcus Aurelius"];
 let	rightCards = [];
 let wrongCards = [];
-let div = document.querySelector('.board')
-let scoreTracker = document.querySelector('.tracker')
-console.log(scoreTracker)
+let scoreTracker = [];
+let board = document.querySelector('.board')
+
+
 
 
 //loop through the cards array
 
 for(let i = 0; i <= cards.length; i++) {
 	let question = cards[i]
-	div.textContent(question)  //present the first question and prompt the user for an answer
+	board.innerHTML = question  //present the first question and prompt the user for an answer
 	console.log(board)
+
 }
 								//compares the input with the answer.
 
@@ -20,3 +22,5 @@ for(let i = 0; i <= cards.length; i++) {
 
 //score trackers prints the length of rightCards array.
 
+for(let i = 0; i <= scoreTracker.length; i++)
+	console.log(i)
