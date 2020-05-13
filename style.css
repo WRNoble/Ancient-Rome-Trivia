@@ -1,6 +1,7 @@
 header {
-	background-color: red;
+	background-color: darkred;
 	color: gold;
+	padding: 30px 20px;
 }
 
 body {
@@ -16,20 +17,31 @@ a {
 	color: yellow;
 }
 
-
-div {
+.container {
 	display: flex;
-	justify-content: center;
-	height: 675px;
+	flex-direction: row;
+}
+
+.board {
+
+	float: left;
+	height: 685px;
 	width: 900px;
+	margin: 20px;
 	background-image: url('PngItem_5261761.png');
   	background-repeat: no-repeat;
   	background-attachment: relative;
   	background-position: center;
-	
+  	text-align: center;
+  	justify-content: center;
+	vertical-align: middle;
 }
 
 p {
 	color: gold;
+}
 
+.panel{
+
+	float: right;
 }
