@@ -8,7 +8,7 @@ let cards = [
  	answer: "CONSTANTINE"
 }, 
 {
-	question: "Which Roman general defeated Hannibal Barca at the Battle of Zama?",
+	question: "Which Roman general defeated Hannibal at the Battle of Zama?",
  	answer: "SCIPIO"
 }, 
 {
@@ -29,15 +29,16 @@ let cards = [
 },
 {
 	question: "Which Emperor took the Empire to its territorial heights?",
-	answer: "Trajon"
+	answer: "TRAJAN"
 },
 {
 	question: "Which Emperor became famous for building a wall stretching coast to coast in Britain?",
-	answer: "Hadrian"
+	answer: "HADRIAN"
 }
 ];
 
 let scoreTracker = [];
+let points = document.querySelector(".tracker");
 let board = document.querySelector('.board');
 
 let button = document.querySelector(".submit");
@@ -50,14 +51,17 @@ button.addEventListener('click', function(e) {
 		let object = cards.shift()
 		scoreTracker.unshift(object)
 		console.log(scoreTracker)
-		console.log(scoreTracker.length)
-		console.log(cards)
+		let pointTracker = scoreTracker.length
+		points.innerHTML = `You have answered ${pointTracker} correctly thus far!`
+		console.log(cards) 
+		displayQuestion()
 	} else {
 		console.log("Sorry, that is incorrect.")
 		let object2 = cards.shift()
 		cards.push(object2)
 		console.log(cards)
 		console.log(scoreTracker)
+		displayQuestion()
 	}
 
 })
@@ -67,32 +71,3 @@ function displayQuestion() {
 }
 
 displayQuestion()
-
-
-//loop through the cards array
-
-// for(let i = 0; i < cards.length; i++) {
-// 	board.innerHTML = cards[i].question  //present the first question and prompt the user for an answer
-// 	break
-	// if (userAnswer === answers) {
-	// 	cards.pop(i).question
-	// 	scoreTracker.push(i)
-	// } else {
-
-	//} // undo this one
-	// for(let j = 0; j < answers.length; i++){
-	// 	if (userAnswer === answers[j]) {
-	// 		//push question into scoreTracker array
-	// 	} else {
-	// 		//
-	// 	}
-	// }
-//} undo this one
-								//compares the input with the answer.
-
-
-
-//score trackers prints the length of rightCards array.
-
-//for(let i = 0; i < scoreTracker.length; i++) {}
-	
