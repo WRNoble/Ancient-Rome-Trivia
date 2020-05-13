@@ -54,6 +54,9 @@ button.addEventListener('click', function(e) {
 		console.log(scoreTracker.length)
 	} else {
 		console.log("Sorry, that is incorrect.")
+		let object2 = cards.shift()
+		cards.push(object2)
+		console.log(cards)
 	}
 
 })
