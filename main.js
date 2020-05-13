@@ -29,8 +29,9 @@ let board = document.querySelector('.board');
 let button = document.querySelector(".submit");
 button.addEventListener('click', function(e) {
 	e.preventDefault()
-	let userAnswer = document.querySelector('.answer').value.toUpperCase;
-	console.log(userAnswer)
+	let userAnswer = document.querySelector('.answer').value
+	let answer2 = userAnswer.toUpperCase();
+	console.log(answer2)
 	playerAnswers.push(userAnswer)
 })
 
