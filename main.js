@@ -1,27 +1,42 @@
 let cards = [
-{question: "Which river is Julius Caesar famous for crossing?",
- answer: "RUBICON"
+{
+	question: "Which river is Julius Caesar famous for crossing?",
+ 	answer: "RUBICON"
 },
-{question: "The first Christian Emperor?",
- answer: "CONSTANTINE"
+{
+	question: "The first Christian Emperor?",
+ 	answer: "CONSTANTINE"
 }, 
-{question: "Which Roman general defeated Hannibal Barca at the Battle of Zama?",
- answer: "SCIPIO"
+{
+	question: "Which Roman general defeated Hannibal Barca at the Battle of Zama?",
+ 	answer: "SCIPIO"
 }, 
-{question: "This Roman Emperor wrote Meditations?",
- answer: "MARCUS AURELIUS"
+{
+	question: "This Roman Emperor wrote Meditations?",
+ 	answer: "MARCUS AURELIUS"
 }, 
-{question: "The name of the general who led elephants over the Alps to attack Rome?",
- answer: "HANNIBAL"
+{
+	question: "The name of the general who led elephants over the Alps to attack Rome?",
+ 	answer: "HANNIBAL"
 },
-{question: "The first Emperor of the Roman Empire?",
- answer: "AUGUSTUS"
+{
+	question: "The first Emperor of the Roman Empire?",
+ 	answer: "AUGUSTUS"
 },
-{question: "This military unit was the backbone of the Roman military",
- answer: "LEGION"
+{
+	question: "This military unit was the backbone of the Roman military",
+ 	answer: "LEGION"
+},
+{
+	question: "Which Emperor took the Empire to its territorial heights?",
+	answer: "Trajon"
+},
+{
+	question: "Which Emperor became famous for building a wall stretching coast to coast in Britain?",
+	answer: "Hadrian"
 }
 ];
-
+console.log(cards)
 let playerAnswers = [];
 let scoreTracker = [];
 let board = document.querySelector('.board');
@@ -31,7 +46,8 @@ button.addEventListener('click', function(e) {
 	e.preventDefault()
 	let userAnswer = document.querySelector('.answer').value
 	let answer2 = userAnswer.toUpperCase();
-	console.log(answer2)
+	
+
 	playerAnswers.push(userAnswer)
 })
 
