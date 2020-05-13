@@ -40,6 +40,7 @@ let cards = [
 let scoreTracker = [];
 let points = document.querySelector(".tracker");
 let board = document.querySelector('.board');
+let response = document.querySelector('.response')
 
 let button = document.querySelector(".submit");
 button.addEventListener('click', function(e) {
@@ -53,10 +54,12 @@ button.addEventListener('click', function(e) {
 		console.log(scoreTracker)
 		let pointTracker = scoreTracker.length
 		points.innerHTML = `You have answered ${pointTracker} correctly thus far!`
+		response.textContent = "Congratulations, you have answer that question correctly!"
 		console.log(cards) 
 		displayQuestion()
 	} else {
 		console.log("Sorry, that is incorrect.")
+		response.textContent = "Sorry, you answered that question incorrectly."
 		let object2 = cards.shift()
 		cards.push(object2)
 		console.log(cards)
