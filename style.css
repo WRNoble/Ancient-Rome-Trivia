@@ -10,6 +10,12 @@ body {
   background-position: center;
 }
 
+a {
+	text-decoration-line: none;
+	text-decoration: none;
+	color: yellow;
+}
+
 
 div {
 	display: flex;
