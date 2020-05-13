@@ -48,8 +48,10 @@ button.addEventListener('click', function(e) {
 	let answer2 = userAnswer.toUpperCase();
 	if (answer2 === cards[0].answer) {
 		console.log(answer2 + " is correct!")
-		console.log(cards.shift())
-		console.log(cards)
+		let object = cards.shift()
+		scoreTracker.unshift(object)
+		console.log(scoreTracker)
+		console.log(scoreTracker.length)
 	} else {
 		console.log("Sorry, that is incorrect.")
 	}
