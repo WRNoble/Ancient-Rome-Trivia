@@ -3,10 +3,23 @@ header {
 	color: gold;
 }
 
+body {
+  background-image: url('34034.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+
 div {
 	display: flex;
 	justify-content: center;
 	height: 400px;
 	width: 700px;
 	background-color: blue;
+}
+
+p {
+	color: gold;
+
 }

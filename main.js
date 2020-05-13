@@ -34,6 +34,10 @@ let cards = [
 {
 	question: "Which Emperor became famous for building a wall stretching coast to coast in Britain?",
 	answer: "HADRIAN"
+},
+{
+	question: "Before the Emperors took control what kind of government did Rome have?",
+	answer: "REPUBLIC"
 }
 ];
 
@@ -42,9 +46,10 @@ let points = document.querySelector(".tracker");
 let board = document.querySelector('.board');
 let response = document.querySelector('.response');
 let next = document.querySelector('.next');
-console.log(next);
+next.addEventListener('click', displayQuestion())
 
 let button = document.querySelector(".submit");
+
 button.addEventListener('click', function(e) {
 	e.preventDefault()
 	let userAnswer = document.querySelector('.answer').value
@@ -55,10 +60,12 @@ button.addEventListener('click', function(e) {
 		scoreTracker.unshift(object)
 		console.log(scoreTracker)
 		let pointTracker = scoreTracker.length
-		points.innerHTML = `You have answered ${pointTracker} correctly thus far!`
+		points.innerHTML = `You have answered ${pointTracker} out of 10 correctly thus far!`
 		response.textContent = "Congratulations, you have answer that question correctly!"
 		console.log(cards) 
 		//displayQuestion()
+		
+
 	} else {
 		console.log("Sorry, that is incorrect.")
 		response.textContent = "Sorry, you answered that question incorrectly."
@@ -71,11 +78,11 @@ button.addEventListener('click', function(e) {
 
 })
 
-
-
-//displayQuestion()
-
-next.addEventListener('click', function displayQuestion() {
+function displayQuestion() {
 	board.innerHTML = cards[0].question
-})
+}
+
+displayQuestion()
+
+
 
