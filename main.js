@@ -65,7 +65,7 @@ button.addEventListener('click', function(e) {
 		points.innerHTML = `You have answered ${pointTracker} out of 10 correctly thus far!`
 		response.textContent = "Congratulations, you have answer that question correctly!"
 		console.log(cards) 
-		displayQuestion()
+		//displayQuestion()
 
 	} else {
 		console.log("Sorry, that is incorrect.")
@@ -74,24 +74,29 @@ button.addEventListener('click', function(e) {
 		cards.push(object2)
 		console.log(cards)
 		console.log(scoreTracker)
-		displayQuestion()
+		
 	}
 
 	for(let i = 0; i <= cards.length; i++)
 	if(cards.length === 0) {
 		board.textContent = "Venisti, vidi, vicit"
 	} else {
-		//board.textContent = "Keep going!"
+		board.textContent = "Keep going!"
+		setTimeout(displayQuestion(), [5000])
 		//next.addEventListener('click', displayQuestion())
 	}
 
 })
 
 function displayQuestion() {
-	board.innerHTML = cards[0].question
+	if (cards.length > 0){
+		board.innerHTML = cards[0].question
+	} else if (cards.length === 0){
+		board.innerHTML = "Venisti, vidi, vicit";
+	}
 }
 
 displayQuestion()
 
-timer.addEventListener('click', )
+//timer.addEventListener('click', )
 
