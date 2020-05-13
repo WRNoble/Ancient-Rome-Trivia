@@ -36,7 +36,7 @@ let cards = [
 	answer: "Hadrian"
 }
 ];
-console.log(cards)
+
 let playerAnswers = [];
 let scoreTracker = [];
 let board = document.querySelector('.board');
@@ -46,9 +46,10 @@ button.addEventListener('click', function(e) {
 	e.preventDefault()
 	let userAnswer = document.querySelector('.answer').value
 	let answer2 = userAnswer.toUpperCase();
-	
+	if (answer2 === cards[0].answer) {
+		console.log(answer2 + " is correct!")
+	}
 
-	playerAnswers.push(userAnswer)
 })
 
 
