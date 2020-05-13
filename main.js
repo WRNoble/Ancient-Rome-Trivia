@@ -48,6 +48,8 @@ button.addEventListener('click', function(e) {
 	let answer2 = userAnswer.toUpperCase();
 	if (answer2 === cards[0].answer) {
 		console.log(answer2 + " is correct!")
+	} else {
+		console.log("Sorry, that is incorrect.")
 	}
 
 })
