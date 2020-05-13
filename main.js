@@ -1,33 +1,39 @@
 let cards = [
-{question: "Which river is Julius Caesar famous for crossing?"},
-{question: "The first Christian Emperor?"}, 
-{question: "Which Roman general defeated Hannibal Barca at the Battle of Zama?"}, 
-{question: "This Roman Emperor wrote Meditations?"}, 
-{question: "The name of the general who led elephants over the Alps to attack Rome?"},
-{question: "The first Emperor of the Roman Empire?"},
-{question: "This military unit was the backbone of the Roman military"}
-];
-
-let answers = [
-{answer: "RUBICON"},
-{answer: "CONSTANTINE"}, 
-{answer: "SCIPIO"}, 
-{answer: "MARCUS AURELIUS"}, 
-{answer: "HANNIBAL"},
-{answer: "AUGUSTUS"},
-{answer: "LEGION"}
+{question: "Which river is Julius Caesar famous for crossing?",
+ answer: "RUBICON"
+},
+{question: "The first Christian Emperor?",
+ answer: "CONSTANTINE"
+}, 
+{question: "Which Roman general defeated Hannibal Barca at the Battle of Zama?",
+ answer: "SCIPIO"
+}, 
+{question: "This Roman Emperor wrote Meditations?",
+ answer: "MARCUS AURELIUS"
+}, 
+{question: "The name of the general who led elephants over the Alps to attack Rome?",
+ answer: "HANNIBAL"
+},
+{question: "The first Emperor of the Roman Empire?",
+ answer: "AUGUSTUS"
+},
+{question: "This military unit was the backbone of the Roman military",
+ answer: "LEGION"
+}
 ];
 
 let playerAnswers = [];
 let scoreTracker = [];
 let board = document.querySelector('.board');
-let userAnswer = document.querySelector('.answer').value.toUpperCase;
+
 let button = document.querySelector(".submit");
-button.addEventListener('click', function(value) {
-	.preventDefault()
+button.addEventListener('click', function(e) {
+	e.preventDefault()
+	let userAnswer = document.querySelector('.answer').value.toUpperCase;
+	console.log(userAnswer)
 	playerAnswers.push(userAnswer)
 })
-console.log(userAnswer)
+
 
 
 
