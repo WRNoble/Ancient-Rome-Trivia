@@ -62,22 +62,24 @@ button.addEventListener('click', function(e) {
 
 })
 
+function displayQuestion() {
+	board.innerHTML = cards[0].question
+}
 
-
-
+displayQuestion()
 
 
 //loop through the cards array
 
-for(let i = 0; i < cards.length; i++) {
-	board.innerHTML = cards[i].question  //present the first question and prompt the user for an answer
-	break
-	if (userAnswer === answers) {
-		cards.pop(i).question
-		scoreTracker.push(i)
-	} else {
+// for(let i = 0; i < cards.length; i++) {
+// 	board.innerHTML = cards[i].question  //present the first question and prompt the user for an answer
+// 	break
+	// if (userAnswer === answers) {
+	// 	cards.pop(i).question
+	// 	scoreTracker.push(i)
+	// } else {
 
-	}
+	//} // undo this one
 	// for(let j = 0; j < answers.length; i++){
 	// 	if (userAnswer === answers[j]) {
 	// 		//push question into scoreTracker array
@@ -85,7 +87,7 @@ for(let i = 0; i < cards.length; i++) {
 	// 		//
 	// 	}
 	// }
-}
+//} undo this one
 								//compares the input with the answer.
 
 
