@@ -90,11 +90,14 @@ button.addEventListener('click', function(e) {
 
 function displayQuestion() {
 	if (cards.length > 0){
-		board.innerHTML = cards[0].question
+		board.innerHTML = "Keep going!";
+		//setTimeout(board.innerHTML = cards[0].question, 5000)
 	} else if (cards.length === 0){
 		board.innerHTML = "Venisti, vidi, vicit";
 	}
 }
+
+setInerval(displayQuestion, 10000);
 
 displayQuestion()
 

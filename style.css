@@ -20,9 +20,13 @@ a {
 div {
 	display: flex;
 	justify-content: center;
-	height: 400px;
-	width: 700px;
-	background-color: blue;
+	height: 675px;
+	width: 900px;
+	background-image: url('PngItem_5261761.png');
+  	background-repeat: no-repeat;
+  	background-attachment: relative;
+  	background-position: center;
+	
 }
 
 p {
