@@ -37,7 +37,6 @@ let cards = [
 }
 ];
 
-let playerAnswers = [];
 let scoreTracker = [];
 let board = document.querySelector('.board');
 
@@ -52,11 +51,13 @@ button.addEventListener('click', function(e) {
 		scoreTracker.unshift(object)
 		console.log(scoreTracker)
 		console.log(scoreTracker.length)
+		console.log(cards)
 	} else {
 		console.log("Sorry, that is incorrect.")
 		let object2 = cards.shift()
 		cards.push(object2)
 		console.log(cards)
+		console.log(scoreTracker)
 	}
 
 })
