@@ -43,13 +43,9 @@ let cards = [
 
 let scoreTracker = [];
 let points = document.querySelector(".tracker");
-let board = document.querySelector('.board');
+let board = document.querySelector('.question-text');
 let response = document.querySelector('.response');
 let timer = document.querySelector('.timer')
-//let victory = document.querySelector('.victory');
-//let next = document.querySelector('.next');
-
-
 let button = document.querySelector(".submit");
 
 button.addEventListener('click', function(e) {
@@ -57,14 +53,11 @@ button.addEventListener('click', function(e) {
 	let userAnswer = document.querySelector('.answer').value
 	let answer2 = userAnswer.toUpperCase();
 	if (answer2 === cards[0].answer) {
-		console.log(answer2 + " is correct!")
 		let object = cards.shift()
 		scoreTracker.unshift(object)
-		console.log(scoreTracker)
 		let pointTracker = scoreTracker.length
 		points.innerHTML = `You have answered ${pointTracker} out of 10 correctly thus far!`
 		response.textContent = "Congratulations, you have answer that question correctly!"
-		console.log(cards) 
 		for(let i = 0; i <= cards.length; i++)
 			if(cards.length === 0) {
 				board.textContent = "Venisti, vidi, vicit"
@@ -72,7 +65,6 @@ button.addEventListener('click', function(e) {
 				displayQuestion()
 			}
 	} else {
-		console.log("Sorry, that is incorrect.")
 		response.textContent = "Sorry, you answered that question incorrectly."
 		let object2 = cards.shift()
 		cards.push(object2)
