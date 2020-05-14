@@ -19,7 +19,7 @@ a {
 	justify-content: space-between;
 }
 
-.container {
+.main {
 	display: flex;
 	flex-direction: row;
 }
@@ -34,6 +34,8 @@ a {
   	background-repeat: no-repeat;
   	background-attachment: relative;
   	background-position: center;
+  	padding-left: 0px;
+  	margin-left: 0px;
 }
 
 .question-text {
@@ -56,4 +58,5 @@ p {
 	order: 1;
 	float: right;
 	flex-direction: column;
+	padding-top: 5px;
 }
