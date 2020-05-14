@@ -55,8 +55,46 @@ p {
 }
 
 .panel{
-	order: 1;
 	float: right;
 	flex-direction: column;
 	padding-top: 5px;
+	border: solid black 3px;
+	margin-left: 15px;
+	margin-top: 80px;
+	margin-bottom: 50px;
+	background-color: darkred;
+	width: 444px;
+	height: 584px;
+	text-align: center;
+}
+
+.item {
+	display: flex;
+	flex-grow: 1;
+	align-items: center;
+	justify-content: center;
+}
+
+.answer {
+	margin: 200px 100px 50px 130px;
+	font-size: 16px;
+}
+
+.submit {
+	display: flex;
+	justify-content: center;
+	align-self: center;
+	margin: 30px 100px 0px 180px;
+	font-size: 16px;
+}
+
+.account{
+	margin: 30px 100px 20px 150px;
+	font-size: 16px;
+}
+
+.tracker,
+.response {
+	margin: 30px 30px;
+	font-size: 16px;
 }
