@@ -4,7 +4,7 @@ let cards = [
  	answer: "RUBICON"
 },
 {
-	question: "The first Christian Emperor?",
+	question: "Who was the first Christian Emperor?",
  	answer: "CONSTANTINE"
 }, 
 {
@@ -16,7 +16,7 @@ let cards = [
  	answer: "MARCUS AURELIUS"
 }, 
 {
-	question: "The name of the general who led elephants over the Alps to attack Rome?",
+	question: "The man who led elephants over the Alps to attack Rome?",
  	answer: "HANNIBAL"
 },
 {
@@ -32,11 +32,11 @@ let cards = [
 	answer: "TRAJAN"
 },
 {
-	question: "Which Emperor became famous for building a wall stretching coast to coast in Britain?",
+	question: "Which Emperor built a coast-to-coast wall in Britain?",
 	answer: "HADRIAN"
 },
 {
-	question: "Before the Emperors took control what kind of government did Rome have?",
+	question: "Before the Emperors, what kind of government did Rome have?",
 	answer: "REPUBLIC"
 }
 ];
@@ -57,7 +57,7 @@ button.addEventListener('click', function(e) {
 		scoreTracker.unshift(object)
 		let pointTracker = scoreTracker.length
 		points.innerHTML = `You have answered ${pointTracker} out of 10 correctly thus far!`
-		response.textContent = "Congratulations, you have answer that question correctly!"
+		response.textContent = "Congratulations, you have answered that question correctly!"
 		for(let i = 0; i <= cards.length; i++)
 			if(cards.length === 0) {
 				board.textContent = "Venisti, vidi, vicit"
