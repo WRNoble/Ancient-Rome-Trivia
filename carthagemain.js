@@ -52,7 +52,6 @@ let cards = [
 ];
 
 let scoreTracker = [];
-//let secondTry = [];
 let wrong = [];
 let points = document.querySelector(".tracker");
 let board = document.querySelector('.question-text');
@@ -82,6 +81,8 @@ function displayQuestion() {
 		board.innerHTML = cards[0].question	
 }
 
+displayQuestion()
+
 function win() {
 	if(cards.length === 0 && scoreTracker.length >= 6/*&& secondTry === 0*/) {
 				board.textContent = "Venisti, vidi, vicit"
@@ -92,4 +93,3 @@ function win() {
 			}
 }
 
-displayQuestion()
