@@ -1,0 +1,100 @@
+header {
+	background-color: darkred;
+	color: gold;
+	padding: 30px 20px;
+}
+
+body {
+  background-image: url('34034.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+a {
+	text-decoration-line: none;
+	text-decoration: none;
+	color: yellow;
+	display: flex;
+	justify-content: space-between;
+}
+
+.main {
+	display: flex;
+	flex-direction: row;
+}
+
+.board {
+	display: flex;
+	float: left;
+	height: 685px;
+	width: 900px;
+	margin: 20px;
+	background-image: url('PngItem_5261761.png');
+  	background-repeat: no-repeat;
+  	background-attachment: relative;
+  	background-position: center;
+  	padding-left: 0px;
+  	margin-left: 0px;
+}
+
+.question-text {
+	color: black;
+	display: flex;
+	justify-content: center;
+	align-self: center;
+	align-items: center;
+	vertical-align: middle;
+	margin: 0 auto;
+	font-size: 25px;
+}
+
+p {
+	color: gold;
+	font-family: 'Kaushan Script', cursive;
+}
+
+.panel{
+	float: right;
+	flex-direction: column;
+	padding-top: 5px;
+	border: solid black 3px;
+	margin-left: 15px;
+	margin-top: 80px;
+	margin-bottom: 50px;
+	background-color: darkred;
+	width: 444px;
+	height: 584px;
+	text-align: center;
+}
+
+.item {
+	display: flex;
+	flex-grow: 1;
+	align-items: center;
+	justify-content: center;
+}
+
+.answer {
+	margin: 200px 100px 50px 130px;
+	font-size: 16px;
+}
+
+.submit {
+	display: flex;
+	justify-content: center;
+	align-self: center;
+	margin: 30px 100px 0px 180px;
+	font-size: 16px;
+}
+
+.account{
+	margin: 30px 100px 20px 150px;
+	font-size: 16px;
+}
+
+.tracker,
+.response {
+	margin: 30px 30px;
+	font-size: 16px;
+}

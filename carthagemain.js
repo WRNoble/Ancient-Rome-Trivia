@@ -1,48 +1,5 @@
 let cards = [
-{
-	question: "Which river is Julius Caesar famous for crossing?",
- 	answer: "RUBICON"
-},
-{
-	question: "Who was the first Christian Emperor?",
- 	answer: "CONSTANTINE",
- 	answer: "PHILLIP",
- 	answer: "PHILIP"
-}, 
-{
-	question: "Which Roman general defeated Hannibal at the Battle of Zama?",
- 	answer: "SCIPIO",
- 	answer: "SCIPIO AFRICANUS"
-}, 
-{
-	question: "This Roman Emperor wrote Meditations?",
- 	answer: "MARCUS AURELIUS"
-}, 
-{
-	question: "The man who led elephants over the Alps to attack Rome?",
- 	answer: "HANNIBAL"
-},
-{
-	question: "The first Emperor of the Roman Empire?",
- 	answer: "AUGUSTUS",
- 	answer: "OCTAVIAN"
-},
-{
-	question: "This military unit was the backbone of the Roman military",
- 	answer: "LEGION"
-},
-{
-	question: "Which Emperor took the Empire to its territorial heights?",
-	answer: "TRAJAN"
-},
-{
-	question: "Which Emperor built a coast-to-coast wall in Britain?",
-	answer: "HADRIAN"
-},
-{
-	question: "Before the Emperors, what kind of government did Rome have?",
-	answer: "REPUBLIC"
-}
+{}
 ];
 
 let scoreTracker = [];
@@ -80,4 +37,3 @@ function displayQuestion() {
 }
 
 displayQuestion()
-//timer.addEventListener('click', )
