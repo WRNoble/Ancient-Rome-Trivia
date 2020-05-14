@@ -52,6 +52,7 @@ let cards = [
 ];
 
 let scoreTracker = [];
+//let secondTry = [];
 let wrong = [];
 let points = document.querySelector(".tracker");
 let board = document.querySelector('.question-text');
@@ -68,23 +69,27 @@ button.addEventListener('click', function(e) {
 		let pointTracker = scoreTracker.length
 		points.innerHTML = `You have answered ${pointTracker} out of 10 correctly thus far!`
 		response.textContent = "Congratulations, you have answered that question correctly!"
-		for(let i = 0; i <= cards.length; i++)
-			if(cards.length === 0) {
-				board.textContent = "Venisti, vidi, vicit"
-			} else {
-				displayQuestion()
-			}
+		win()
 	} else {
 		response.textContent = "Sorry, you answered that question incorrectly."
 		let object2 = cards.shift()
 		wrong.push(object2)
-		console.log(wrong)
-		displayQuestion()
+		win()
 	}
 })
 
 function displayQuestion() {
-		board.innerHTML = cards[0].question
+		board.innerHTML = cards[0].question	
+}
+
+function win() {
+	if(cards.length === 0 && scoreTracker.length >= 6/*&& secondTry === 0*/) {
+				board.textContent = "Venisti, vidi, vicit"
+			} else if (cards.length === 0 && scoreTracker.length <= 5){
+				board.textContent = "You were unable to survive the barbarian invasion."
+			} else {
+				displayQuestion()
+			}
 }
 
 displayQuestion()

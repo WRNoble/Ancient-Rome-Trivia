@@ -80,7 +80,8 @@ p {
 	font-size: 16px;
 }
 
-.submit {
+.submit,
+.reset {
 	display: flex;
 	justify-content: center;
 	align-self: center;
