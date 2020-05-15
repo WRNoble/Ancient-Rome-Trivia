@@ -1,5 +1,5 @@
 //Array establishing the questions
-let cards = [
+let questions = [
 {
 	question: "Which river is Julius Caesar famous for crossing?",
  	answer: "RUBICON"
@@ -49,45 +49,46 @@ let board = document.querySelector('.question-text');
 let response = document.querySelector('.response');
 let button = document.querySelector('.submit');
 //game logic comes last to ensure everything has been declared.
+
+displayQuestion()//calls the first question to the screen
+
+function displayQuestion() {
+	board.innerHTML = questions[0].question	;
+}
+
 button.addEventListener('click', function(e) {
 	e.preventDefault();
 	let userAnswer = document.querySelector('.answer').value.toUpperCase();
 	moveCard(userAnswer);
 })
-//needs functions are found below the event listener
-function displayQuestion() {
-	board.innerHTML = cards[0].question	;
-}
-
-displayQuestion()//calls the first question to the screen
 
 function moveCard(userAnswer) {
-	if (userAnswer === cards[0].answer) {
-		let cardInPlay = cards.shift();
+	if (userAnswer === questions[0].answer) {
+		let cardInPlay = questions.shift();
 		scoreTracker.unshift(cardInPlay);
 		points.innerHTML = `You have answered ${scoreTracker.length} out of 10 correctly thus far!`;
 		response.textContent = "Congratulations, you have answered that question correctly!";
-		win();
+		endGame();
 	} else {
 		response.textContent = "Sorry, you answered that question incorrectly.";
-		let wrongAnswer = cards.shift();
+		let wrongAnswer = questions.shift();
 		wrong.push(wrongAnswer);
-		win();
+		endGame();
 	}
 }
 
-function setTimer() {
-
-}
-
-function win() {
-	if(cards.length === 0 && scoreTracker.length >= 6) {
+function endGame() {
+	if(questions.length === 0 && scoreTracker.length >= 6) {
 		board.textContent = "Venisti, vidi, vicit!"
 		document.querySelector('.submit').disabled = true;
-	} else if (cards.length === 0 && scoreTracker.length <= 5){
+	} else if (questions.length === 0 && scoreTracker.length <= 5){
 		board.textContent = "You did not survive the barbarian invasion."
 		document.querySelector('.submit').disabled = true;
 	} else {
 		displayQuestion()
 	}
+}
+
+function setTimer() {
+
 }
