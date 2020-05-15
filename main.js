@@ -42,13 +42,14 @@ let questions = [
 }
 ];
 //establishing important variables before the logic.
-let scoreTracker = [];
-let wrong = [];
-let points = document.querySelector('.tracker');
-let board = document.querySelector('.question-text');
-let response = document.querySelector('.response');
-let button = document.querySelector('.submit');
 const totalQuestions = questions.length;
+const scoreTracker = [];
+const wrong = [];
+const points = document.querySelector('.tracker');
+const board = document.querySelector('.question-text');
+const response = document.querySelector('.response');
+const button = document.querySelector('.submit');
+
 //game logic comes last to ensure everything has been declared.
 
 displayQuestion()//calls the first question to the screen
@@ -56,6 +57,7 @@ displayQuestion()//calls the first question to the screen
 function displayQuestion() {
 	board.innerHTML = questions[0].question	;
 	document.querySelector('.submit').disabled = false;
+	points.innerHTML = `You have answered ${scoreTracker.length} out of ${totalQuestions} correctly thus far!`;
 }
 
 button.addEventListener('click', function(e) {
@@ -66,32 +68,23 @@ button.addEventListener('click', function(e) {
 
 function moveQuestion(userAnswer) {
 	if (userAnswer === questions[0].answer) {
-		let cardInPlay = questions.shift();
-		scoreTracker.unshift(cardInPlay);
-		points.innerHTML = `You have answered ${scoreTracker.length} out of ${totalQuestions} correctly thus far!`;
+		scoreTracker.unshift(questions.shift());
 		response.textContent = "Congratulations, you have answered that question correctly!";
 		endGame();
 	} else {
+		wrong.push(questions.shift());
 		response.textContent = "Sorry, you answered that question incorrectly.";
-		let wrongAnswer = questions.shift();
-		wrong.push(wrongAnswer);
 		endGame();
 	}
 }
 
 function endGame() {
 	document.querySelector('.submit').disabled = true;
-	if(questions.length === 0 && scoreTracker.length >= 6) {
-		board.textContent = "Venisti, vidi, vicit!"
-		
-	} else if (questions.length === 0 && scoreTracker.length <= 5){
-		board.textContent = "You did not survive the barbarian invasion."
-		
-	} else {
-		displayQuestion()
-	}
-}
-
-function setTimer() {
-
+		if(questions.length === 0 && scoreTracker.length >= 6) {
+			board.textContent = "Venisti, vidi, vicit!"
+		} else if (questions.length === 0 && scoreTracker.length <= 5){
+			board.textContent = "You did not survive the barbarian invasion."	
+		} else {
+			displayQuestion()
+		}
 }
