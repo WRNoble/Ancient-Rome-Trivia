@@ -48,25 +48,27 @@ let points = document.querySelector('.tracker');
 let board = document.querySelector('.question-text');
 let response = document.querySelector('.response');
 let button = document.querySelector('.submit');
+const totalQuestions = questions.length;
 //game logic comes last to ensure everything has been declared.
 
 displayQuestion()//calls the first question to the screen
 
 function displayQuestion() {
 	board.innerHTML = questions[0].question	;
+	document.querySelector('.submit').disabled = false;
 }
 
 button.addEventListener('click', function(e) {
 	e.preventDefault();
 	let userAnswer = document.querySelector('.answer').value.toUpperCase();
-	moveCard(userAnswer);
+	moveQuestion(userAnswer);
 })
 
-function moveCard(userAnswer) {
+function moveQuestion(userAnswer) {
 	if (userAnswer === questions[0].answer) {
 		let cardInPlay = questions.shift();
 		scoreTracker.unshift(cardInPlay);
-		points.innerHTML = `You have answered ${scoreTracker.length} out of 10 correctly thus far!`;
+		points.innerHTML = `You have answered ${scoreTracker.length} out of ${totalQuestions} correctly thus far!`;
 		response.textContent = "Congratulations, you have answered that question correctly!";
 		endGame();
 	} else {
@@ -78,12 +80,13 @@ function moveCard(userAnswer) {
 }
 
 function endGame() {
+	document.querySelector('.submit').disabled = true;
 	if(questions.length === 0 && scoreTracker.length >= 6) {
 		board.textContent = "Venisti, vidi, vicit!"
-		document.querySelector('.submit').disabled = true;
+		
 	} else if (questions.length === 0 && scoreTracker.length <= 5){
 		board.textContent = "You did not survive the barbarian invasion."
-		document.querySelector('.submit').disabled = true;
+		
 	} else {
 		displayQuestion()
 	}
