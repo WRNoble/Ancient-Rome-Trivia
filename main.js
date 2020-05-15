@@ -60,14 +60,13 @@ function displayQuestion() {
 	board.innerHTML = cards[0].question	;
 }
 
-displayQuestion()
+displayQuestion()//calls the first question to the screen
 
 function moveCard(input) {
 	if (input === cards[0].answer) {
 		let cardInPlay = cards.shift();
 		scoreTracker.unshift(cardInPlay);
-		let pointTracker = scoreTracker.length;
-		points.innerHTML = `You have answered ${pointTracker} out of 10 correctly thus far!`;
+		points.innerHTML = `You have answered ${scoreTracker.length} out of 10 correctly thus far!`;
 		response.textContent = "Congratulations, you have answered that question correctly!";
 		win();
 	} else {
@@ -88,6 +87,7 @@ function win() {
 		document.querySelector('.submit').disabled = true;
 	} else if (cards.length === 0 && scoreTracker.length <= 5){
 		board.textContent = "You did not survive the barbarian invasion."
+		document.querySelector('.submit').disabled = true;
 	} else {
 		displayQuestion()
 	}
