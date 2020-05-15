@@ -51,9 +51,8 @@ let button = document.querySelector('.submit');
 //game logic comes last to ensure everything has been declared.
 button.addEventListener('click', function(e) {
 	e.preventDefault();
-	let userAnswer = document.querySelector('.answer').value;
-	let input = userAnswer.toUpperCase();
-	moveCard(input);
+	let userAnswer = document.querySelector('.answer').value.toUpperCase();
+	moveCard(userAnswer);
 })
 //needs functions are found below the event listener
 function displayQuestion() {
@@ -62,8 +61,8 @@ function displayQuestion() {
 
 displayQuestion()//calls the first question to the screen
 
-function moveCard(input) {
-	if (input === cards[0].answer) {
+function moveCard(userAnswer) {
+	if (userAnswer === cards[0].answer) {
 		let cardInPlay = cards.shift();
 		scoreTracker.unshift(cardInPlay);
 		points.innerHTML = `You have answered ${scoreTracker.length} out of 10 correctly thus far!`;
