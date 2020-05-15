@@ -57,7 +57,6 @@ displayQuestion()//calls the first question to the screen
 function displayQuestion() {
 	board.innerHTML = questions[0].question	;
 	document.querySelector('.submit').disabled = false;
-	points.innerHTML = `You have answered ${scoreTracker.length} out of ${totalQuestions} correctly thus far!`;
 }
 
 button.addEventListener('click', function(e) {
@@ -79,6 +78,7 @@ function moveQuestion(userAnswer) {
 }
 
 function endGame() {
+	points.innerHTML = `You have answered ${scoreTracker.length} out of ${totalQuestions} correctly thus far!`;
 	document.querySelector('.submit').disabled = true;
 		if(questions.length === 0 && scoreTracker.length >= 6) {
 			board.textContent = "Venisti, vidi, vicit!"
