@@ -19,6 +19,11 @@ a {
 	justify-content: space-between;
 }
 
+p {
+	color: gold;
+	font-family: 'Kaushan Script', cursive;
+}
+
 .main {
 	display: flex;
 	flex-direction: row;
@@ -46,11 +51,6 @@ a {
 	vertical-align: middle;
 	margin: 0 auto;
 	font-size: 25px;
-}
-
-p {
-	color: gold;
-	font-family: 'Kaushan Script', cursive;
 }
 
 .panel{
