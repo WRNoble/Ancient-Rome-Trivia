@@ -59,16 +59,16 @@ p {
   align-items: center;
   float: right;
   flex-direction: column;
-  padding-top: 5px;
   border: solid black 3px;
   margin-top: 150px;
   background-color: darkred;
   width: 444px;
-  height: 350px;
+  height: 375px;
 }
 
 .answer {
   margin-bottom: 20px;
+  padding: 5px 0px;
 }
 
 .submit,
