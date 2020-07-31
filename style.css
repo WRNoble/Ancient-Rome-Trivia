@@ -1,4 +1,4 @@
-@media all and (max-width: 1000px) {
+@media all and (max-width: 1100px) {
   .main,
   .panel {
     display: flex;
@@ -54,6 +54,7 @@
     vertical-align: middle;
     margin: 0 auto;
     font-size: 25px;
+    margin-top: 120px;
   }
 
   .panel {
@@ -87,7 +88,7 @@
   }
 }
 
-@media all and (min-width: 1001px) {
+@media all and (min-width: 1101px) {
   header {
     background-color: darkred;
     color: gold;
